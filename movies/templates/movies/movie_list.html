@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Movie List - My Django App{% endblock %}
+
+{% block content %}
+<h1>Movies List</h1>
+<ul>
+    {% for movie in movies %}
+        <li><a href="{% url 'movie_detail' movie.id %}">{{ movie.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
