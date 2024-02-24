@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
-{% block title %}Movie List - My Django App{% endblock %}
-
 {% block content %}
-<h1>Movies List</h1>
-<ul>
+  <h1 class="center">Movies List</h1>
+  <ul>
     {% for movie in movies %}
-        <li><a href="{% url 'movie_detail' movie.id %}">{{ movie.title }}</a></li>
+      <li class="center">
+        <a  href="{% url 'movies:movie_detail' movie.id %}">{{ movie.title }}
+        <div class="card-image">
+          <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie_data.title }} Poster">
+          <span class="card-title">{{ movie_data.title }}</span>
+      </div>
+        </a>
+        <!-- Add other movie details as needed -->
+      </li>
     {% endfor %}
-</ul>
+  </ul>
 {% endblock %}

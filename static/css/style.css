@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url('/static/css/background.jpg'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+main {
+    flex: 1 0 auto;
+  }
+  
+footer {
+    padding-top: 0;
+    text-align: right;
+  }
+
+.responsive-img {
+    max-width: 500px;
+    height: auto;
+}
+
+nav {
+    background-color: grey;
+}
+
+.page-footer {
+    background-color: grey;
+}
+
+h1 {
+    color: white;
+}
+
+
+h2 {
+  color: whitesmoke;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.movie-details {
+  margin-top: 20px;
+}
+
+.review-list {
+  margin-top: 20px;
+}
+
+.review {
+  border: 1px solid #BDC3C7;  /* Materialize silver */
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.review h4 {
+  color: #2C3E50;
+}
+
+.review p {
+  color: #7F8C8D;  /* Materialize blue-grey lighten-2 */
+}
+
+a {
+  color: red;
+}
+

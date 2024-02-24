@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 
-{% block title %}Movie List - My Django App{% endblock %}
-
 {% block content %}
-    <h2>User Profile</h2>
-    <!-- Add content specific to the user profile -->
+  <h2>Welcome, {{ user.username }}!</h2>
+
+  <div>
+    <h3>User Information</h3>
+    <p>Email: {{ user.email }}</p>
+    <p>First Name: {{ user.first_name }}</p>
+    <p>Last Name: {{ user.last_name }}</p>
+    <!-- Add other user-related information as needed -->
+  </div>
+
+  <!-- You can customize and extend the profile template based on your requirements -->
 {% endblock %}
