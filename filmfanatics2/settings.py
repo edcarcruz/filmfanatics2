@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -103,6 +104,26 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AWS_ACCESS_KEY_ID = 'AKIAZQ3DRCU5ROYLGKLM'
+AWS_SECRET_ACCESS_KEY = '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'
+
+AWS_STORAGE_BUCKET_NAME = 'filmfanatics2'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_FILE_OVERWRITE = False
+
+
+
+STORAGES = {
+    
+    'default': {
+        'BACKEND': 'storages.backends.s3boto3.S3StaticStorage',
+    },
+    
+    'staticfiles': {
+        'BACKEND': 'storages.backends.s3boto3.S3StaticStorage',
+    },
+}
 
 
 # Internationalization
