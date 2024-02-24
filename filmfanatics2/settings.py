@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-from decouple import AutoConfig
+from decouple import config
 import os
 
 
@@ -132,7 +132,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-config = AutoConfig()
-
-MOVIE_API_KEY = '64072b1e511fe9ad82ab3a4c9d4cc88e'
+API_KEY = config('API_KEY', default='')
 

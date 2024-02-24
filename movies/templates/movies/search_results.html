@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Search Results for "{{ query }}"</h2>
+    <h2 class="center">Search Results for "{{ query }}"</h2>
 
     {% if movies_data %}
-        <ul>
+        <ul class="center">
             {% for movie in movies_data %}
-                <li><a href="{% url 'movies:movie_detail' movie.id %}">{{ movie.title }}</a></li>
+                <li><a href="{% url 'movies:movie_detail' movie.id %}">{{ movie.title }}
+                <div class="card-image">
+                    <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie_data.title }} Poster">
+                    <span class="card-title">{{ movie_data.title }}</span>
+                </div>
+                    </a>
+                </li>
             {% endfor %}
         </ul>
     {% else %}

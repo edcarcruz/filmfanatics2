@@ -52,7 +52,8 @@ def search_results(request):
     query = request.GET.get('query')
 
     if query:
-        api_key = '64072b1e511fe9ad82ab3a4c9d4cc88e'
+        
+        api_key = settings.API_KEY
         api_url = 'https://api.themoviedb.org/3/search/movie'
         params = {'api_key': api_key, 'query': query}
         
