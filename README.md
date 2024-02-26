@@ -20,5 +20,10 @@ Film Fanatics 2 is a web application that allows users to explore, review, and d
 - Materialize
 - TMdb API
 
+## Wireframes
+
+![wireframe](https://i.imgur.com/Nu32bH7.jpeg)
+![wireframe](https://i.imgur.com/v7VGR4h.jpeg)
+
 ## Link to Live Application
 [https://filmfanatics2.onrender.com/](https://filmfanatics2.onrender.com/)
